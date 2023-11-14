@@ -17,13 +17,3 @@ async def get_form(template_data: str):
     else:
         field_types = guess_field_types(template_data)
         return field_types
-
-
-if __name__ == "__main__":
-    import uvicorn
-
-    uvicorn.run(
-        app,
-        host="127.0.0.1",
-        port=80,
-    )
