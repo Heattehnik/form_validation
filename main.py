@@ -1,6 +1,6 @@
 from tinydb import TinyDB
 from fastapi import FastAPI, Request
-from utils import parse_template_data, find_matching_template, guess_field_types
+from utils import find_matching_template, guess_field_types
 
 db = TinyDB("./database/forms.json")
 app = FastAPI()
@@ -22,5 +22,4 @@ async def get_form(request: Request):
 if __name__ == "__main__":
     import uvicorn
 
-    uvicorn.run(app, host='0.0.0.0', port=8000)
-
+    uvicorn.run(app, host="0.0.0.0", port=8000)
